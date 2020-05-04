@@ -412,7 +412,7 @@ public class v21readXML {
 				System.out.println("FECHA DE VENCIMIENTO_ _ _ _ _ _: " + Cabecera.get_fecha_vencimiento());
 
 			} catch (Exception e) {
-				Cabecera.set_fecha_vencimiento("");
+
 			}
 			
 			
@@ -422,16 +422,8 @@ public class v21readXML {
 			// dias de vencimiento
 		//	NodeList nList_guia = doc.getElementsByTagName("cbc:DocumentTypeCode");
 			Node nNode_dias = nList_guia.item(2);
-			
-			try {
-				Cabecera.set_dias(nNode_dias.getTextContent());
-				System.out.println("DIAS_ _ _ __ _ _ _ _ _ _ _ _: " + Cabecera.get_dias());
-
-			} catch (Exception e) {
-				Cabecera.set_dias("");
-				System.out.println("DIAS_ _ _ __ _ _ _ _ _ _ _ _: " + Cabecera.get_dias());
-
-			}
+			Cabecera.set_dias(nNode_dias.getTextContent());
+			System.out.println("DIAS_ _ _ __ _ _ _ _ _ _ _ _: " + Cabecera.get_dias());
 
 
 			
